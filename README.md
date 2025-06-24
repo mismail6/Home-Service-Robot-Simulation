@@ -1,3 +1,7 @@
+This project developed a complete autonomous home service robot system using ROS that can navigate to designated pickup and drop-off locations while providing visual feedback through virtual object markers in a simulated environment.
+
+Key Technologies: SLAM, AMCL Localization, Rviz 3D visualizatoin, Trajectory Planning, Particle Filtering, Sensor Fusion, and Teleoperation.
+
 For mapping, the gmapping package was used to perform SLAM, allowing the robot to build a map of its environment while being manually controlled via the turtlebot_teleop package. 
 
 For localization, the amcl package enabled the robot to determine its position within the pre-built map.
