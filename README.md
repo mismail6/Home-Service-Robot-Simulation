@@ -1,6 +1,9 @@
-For mapping, the gmapping package was used to perform SLAM, allowing the robot to build a map of its environment while being manually controlled via the turtlebot_teleop package. The package uses a particle filter algorithm. Each particle represents a hypothesis about the robot's trajectory and corresponding map. As the robot moves, the algorithm processes laser scan data to simultaneously update both the robot's position estimate and the occupancy grid map.
-For localization, the amcl package enabled the robot to determine its position within the pre-built map. The package uses a particle filter to determine the robot's pose within a known map. Particles represent position hypotheses that are weighted based on how well laser scan measurements match expected readings from the map. The algorithm adaptively adjusts particle count based on localization confidence - using more particles when uncertain and fewer when well-localized.
-For navigation, the move_base package provided the core autonomous navigation capabilities, implementing path planning and obstacle avoidance to guide the robot between pickup and drop-off zones. The global planner (using Dijkstra or A* algorithms) computes optimal paths on the static map from current position to goal. The local planner (Dynamic Window Approach) handles real-time obstacle avoidance by evaluating possible velocity commands and selecting trajectories that balance goal progress, obstacle clearance, and movement constraints.
+For mapping, the gmapping package was used to perform SLAM, allowing the robot to build a map of its environment while being manually controlled via the turtlebot_teleop package. 
+
+For localization, the amcl package enabled the robot to determine its position within the pre-built map.
+
+For navigation, the move_base package provided the core autonomous navigation capabilities, implementing path planning and obstacle avoidance to guide the robot between pickup and drop-off zones. 
+
 For visualization, the visualization_msgs package enables creation of visual markers in RViz for representing virtual objects and providing task status feedback to operators.
 Additionally, the turtlebot_gazebo package provides physics simulation, robot dynamics, and sensor modeling for testing navigation algorithms in a controlled virtual environment.
 
